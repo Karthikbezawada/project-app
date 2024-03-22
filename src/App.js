@@ -35,7 +35,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home/>} />
                     <Route path="/about" element={<About/>} />
-                    <Route path='*' element={<div>404 NOT FOUND</div>}/>
+                    {/* <Route path='*' element={<div>404 NOT FOUND</div>}/> */}
                 </Routes>
           
         </Router>
