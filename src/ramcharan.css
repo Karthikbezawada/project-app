@@ -1,0 +1,35 @@
+.rrr{
+    color: purple;
+    font-size: 86px;
+}
+.logo{
+    color: blue;
+    font-size: 145px;
+}
+Resetting default margin and padding
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles for the navigation */
+nav {
+    background-color: #333; /* Background color */
+    padding: 20px; /* Padding for the navigation */
+}
+
+/* Styling for the navigation spans */
+nav span {
+    color: white; /* Text color */
+    font-size: 23px;
+    padding: 10px 20px; /* Padding for top and bottom, left and right */
+    margin-right: 10px; /* Right margin between spans */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Hover effect for navigation spans */
+nav span:hover {
+    background-color: #555; /* Darker background color on hover */
+}
