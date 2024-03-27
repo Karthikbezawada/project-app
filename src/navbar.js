@@ -35,8 +35,8 @@ function Navbar() {
                 <div>
                 <Link to="/"><span>Home</span></Link>
                 <Link to="/about"><span>About</span></Link>
-                <Link><span>Service</span></Link>
-                <span>Contact Us</span>
+                <Link to="/service"><span>Service</span></Link>
+                <Link to="/donateus"><span>Donate</span></Link>
                 </div>
             </nav>
         </div>
