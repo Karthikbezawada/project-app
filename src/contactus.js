@@ -13,8 +13,8 @@ const ContactUs = () => {
         imgSrc={imgg}
         imgAlt="Card Image"
         title="RRR"
-        link="https://www.shriramtemple.org.in/donate-now" 
-        // link="https://github.com/Karthikbezawada"
+        // link="https://www.shriramtemple.org.in/donate-now" 
+        link="https://github.com/Karthikbezawada"
 
         description="Ram Mandir Hindu temple built in Ayodhya India on the site of the Babri Masjid symbolizing cultural and religious significance"
       />

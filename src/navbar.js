@@ -1,27 +1,3 @@
-// import React from 'react'
-// import './App.css';
-// import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-// import Home from './navhome.js';
-// import {Link} from 'react-router-dom'
-
-// function navbar() {
-//     return (
-//         <div>
-//             <nav>
-//                 <Link to='./navhome.js'><span>Home</span></Link>
-//                 <Link to='./navabout.js'><span>About</span></Link>
-//                 <span>Service</span>
-//                 <span>Contact Us</span>
-
-//             </nav>
-
-//         </div>
-//     )
-// }
-
-// export default navbar
-
 import React from 'react';
 import './App.css';
 import { Link } from 'react-router-dom';
@@ -37,6 +13,8 @@ function Navbar() {
                 <Link to="/about"><span>About</span></Link>
                 <Link to="/service"><span>Service</span></Link>
                 <Link to="/donateus"><span>Donate</span></Link>
+                <Link to='/register'><span>Register</span></Link>
+                {/* <Link to='/register'><span>RRR</span></Link> */}
                 </div>
             </nav>
         </div>

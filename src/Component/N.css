@@ -1,0 +1,20 @@
+.icon{
+    height: 25px;
+    width: 20px;
+}
+.headings{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.ap{
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar-nav .nav-item:not(:last-child) {
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+  .custom-navbar {
+    background-color: papayawhip;
+}
