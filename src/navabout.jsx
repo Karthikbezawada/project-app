@@ -21,6 +21,9 @@ function NavAbout() {
   const goToHome = () => {
     navigate('/home');
 };
+const NewLunch = () => {
+  navigate('/newlaunch');
+};
 
   return (
     <div>
@@ -49,7 +52,7 @@ function NavAbout() {
           <a className="nav-link headings" aria-current="page" href="#">Products</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link headings" aria-current="page" href="#">New Launches</a>
+          <a className="nav-link headings" onClick={NewLunch} aria-current="page" href="#">New Launches</a>
         </li>
         
         <li className="nav-item">

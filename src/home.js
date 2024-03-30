@@ -1,5 +1,9 @@
 import React from 'react'
 import Nav from './navabout';
+import './Component/N.css';
+import Foot from './foot'
+import img8 from './Component/8.jpeg';
+import img9 from './Component/9.jpeg';
 
 function Home() {
   return (
@@ -37,8 +41,19 @@ function Home() {
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<div>
+<iframe className='mt-1' width="100%" height="515" src="https://www.youtube.com/embed/IY4x85zqoJM?si=cOcVuXHVKU1vs1CP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
         </div>
-      
+        <img className='w-100' src={img8} alt="Image 1" />
+        {/* <img className='w-100' src={img9} alt="Image 1" /> */}
+        
+        <Foot/>
+      {/* <footer className='bg-success m-auto text-center foot w-100  p-3'>
+        <a className='aa' target="_blank" href='https://www.facebook.com/flipkart/'><span><FaFacebookF />FaceBook</span></a>
+        <a className='aa' target="_blank" href='https://www.instagram.com/flipkart/?hl=en'><span><FaInstagram />Instagram</span></a>
+        <a className='aa' target="_blank" href='https://www.facebook.com/flipkart/'><span><IoMdGlobe />Website</span></a>
+        <a className='aa' target="_blank" href='https://www.facebook.com/flipkart/'><span><BsTwitterX /> X</span></a>
+      </footer> */}
     </div>
   )
 }

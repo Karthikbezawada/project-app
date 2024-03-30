@@ -8,6 +8,7 @@ import Contact from './contactus.js';
 import Login from './login.js';
 import Register from './register.js';
 import Ho from './home.js'
+import NL from './newla.js'
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                     <Route path="/donateus" element={<Contact/>}/>
                     <Route path='/register' element={<Register/>} />
                     <Route path='/home' element={<Ho/>} />
+                    <Route path='/newlaunch' element={<NL/>} />
                     
                     
                     
