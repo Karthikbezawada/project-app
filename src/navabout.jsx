@@ -25,6 +25,10 @@ const NewLunch = () => {
   navigate('/newlaunch');
 };
 
+const GotoProducts = () => {
+  navigate('/products');
+};
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-success">
@@ -49,7 +53,7 @@ const NewLunch = () => {
           <a className="nav-link headings" aria-current="page" onClick={goToHome} href="#">Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link headings" aria-current="page" href="#">Products</a>
+          <a className="nav-link headings" onClick={GotoProducts} aria-current="page" href="#">Products</a>
         </li>
         <li className="nav-item">
           <a className="nav-link headings" onClick={NewLunch} aria-current="page" href="#">New Launches</a>

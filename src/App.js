@@ -9,6 +9,7 @@ import Login from './login.js';
 import Register from './register.js';
 import Ho from './home.js'
 import NL from './newla.js'
+import Products from './products.js';
 
 function App() {
     return (
@@ -25,6 +26,7 @@ function App() {
                     <Route path='/register' element={<Register/>} />
                     <Route path='/home' element={<Ho/>} />
                     <Route path='/newlaunch' element={<NL/>} />
+                    <Route path='/products' element={<Products/>}/>
                     
                     
                     
