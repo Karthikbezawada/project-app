@@ -1,90 +1,113 @@
 
-import React, { useState } from "react";
-import Navbar from "./navbar";
+// import React, { useState } from "react";
+// import Navbar from "./navbar";
 
+// import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Register() {
-    const[name,setName]= useState('');
-    const[email,setEmail]= useState('');
-    const[password,setPassword]= useState('');
-    const[number,setNumber]= useState('');
+    const [formData, setFormData] = useState({
+        name: '',
+        Mobile: '',
+        Email: '',
+        password: ''
+    });
 
     const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.table("Registration Successful", formData);
+
+        // Save form data to localStorage
+        localStorage.setItem('user', JSON.stringify(formData));
+
+        // Clear form data
+        setFormData({
+            name: "",
+            Mobile: "",
+            Email: "",
+            password: "",
+        });
+
+        // Display alert for successful registration
+        alert("Registration Successful");
+
+        // Navigate to the login page
+        navigate("/login");
+    };
 
     const handleLoginClick = () => {
         navigate('/login');
     };
 
-  return (
-    <div>
-        {/* <Navbar/> */}
-      <div className="border w-25 mt-5 m-auto p-3">
-        <h1 className="text-secondary text-center">Register Page</h1>
-        <div className="mt-3">
-            <label>
-                Name
-            </label>
-            <input type='name' className="form-control" id='name' placeholder='Enter your Name' value={name}
-            onChange={(e)=>{setName(e.target.value)}} 
-            />
-        </div>
-        <div className="mt-3">
-            <label>
-                Email
-            </label>
-            <input type='email' className="form-control" id='email' placeholder='Enter your email' value={email}
-            onChange={(e)=>{setEmail(e.target.value)}} 
-            />
-        </div>
-        <div className="mt-3">
-            <label>
-                Password
-            </label>
-            <input type='password' className="form-control" id='password' placeholder='Enter your password' value={password}
-            onChange={(e)=>{setPassword(e.target.value)}} 
-            />
-        </div>
-        <div className="mt-3">
-            <label>
-                Phone Number
-            </label>
-            <input type='number' className="form-control" id='number' placeholder='Enter your Number' value={number}
-            onChange={(e)=>{setNumber(e.target.value)}} 
-            />
-        </div>
-        
-        
-        {/* <div>
-            <button className="btn btn-secondary w-100 mt-3" onClick={handleLoginClick} onClick={()=>{
-                
-                console.log("Name:- "+name);
-                console.log("Email:- "+email);
-                console.log("Password:- "+password);
-                console.log("Number:- "+number);
-                alert("Registration Successful !!!");
-                
-            }} >Register</button>
-        </div> */}
+    return (
         <div>
-    <button className="btn btn-success w-100 mt-3" onClick={() => {
-        handleLoginClick();
-        console.log("Name:- " + name);
-        console.log("Email:- " + email);
-        console.log("Password:- " + password);
-        console.log("Number:- " + number);
-        alert("Registration Successful !!!");
-    }}>Register</button>
-</div>
-
-
-        <p className="text-center mt-2">or</p>
-        <div>
-            <button className="btn btn-primary w-100" onClick={handleLoginClick} >Login</button>
+            <div className="border w-25 mt-5 m-auto p-3">
+                <h1 className="text-secondary text-center">Register Page</h1>
+                <div className="mt-3">
+                    <label>Name:</label>
+                    <input
+                        type='text'
+                        className="form-control"
+                        name='name'
+                        placeholder='Enter your Name'
+                        value={formData.name}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="mt-3">
+                    <label>Mobile:</label>
+                    <input
+                        type='text'
+                        className="form-control"
+                        name='Mobile'
+                        placeholder='Enter your Mobile Number'
+                        value={formData.Mobile}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="mt-3">
+                    <label>Email:</label>
+                    <input
+                        type='email'
+                        className="form-control"
+                        name='Email'
+                        placeholder='Enter your email'
+                        value={formData.Email}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div className="mt-3">
+                    <label>Password:</label>
+                    <input
+                        type='password'
+                        className="form-control"
+                        name='password'
+                        placeholder='Enter your password'
+                        value={formData.password}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <button className="btn btn-success w-100 mt-3" onClick={handleSubmit}>Register</button>
+                </div>
+                <p className="text-center mt-2">or</p>
+                <div>
+                    <button className="btn btn-primary w-100" onClick={handleLoginClick}>Login</button>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
-  )
+    );
 }
 
-export default Register
+export default Register;

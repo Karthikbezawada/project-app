@@ -29,6 +29,13 @@ const GotoProducts = () => {
   navigate('/products');
 };
 
+const ContactUs=() => {
+  navigate('/contactus');
+}
+const Service=() => {
+  navigate('/service');
+}
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-success">
@@ -60,11 +67,11 @@ const GotoProducts = () => {
         </li>
         
         <li className="nav-item">
-          <a className="nav-link headings" href="#">Service</a>
+          <a className="nav-link headings" onClick={Service} href="#">Service</a>
         </li>
         
         <li className="nav-item">
-          <a className="nav-link headings" href="#">Contactus</a>
+          <a className="nav-link headings" onClick={ContactUs} href="#">Contactus</a>
         </li>
 
 
