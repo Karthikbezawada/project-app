@@ -61,6 +61,7 @@ const Login = () => {
                     <button className="btn btn-secondary w-100" onClick={handleRegisterClick}>New User Registration</button>
                 </div>
             </div>
+            
         </>
     );
 };

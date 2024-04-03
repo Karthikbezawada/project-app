@@ -6,7 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 
 
+
 function NavAbout() {
+  const userData = JSON.parse(localStorage.getItem("user"));
 
   const navigate = useNavigate();
 
@@ -35,6 +37,9 @@ const ContactUs=() => {
 const Service=() => {
   navigate('/service');
 }
+const Myprofile=() => {
+  navigate('/myprofile');
+}
 
   return (
     <div>
@@ -46,7 +51,7 @@ const Service=() => {
             <FaUserAlt className="icon" />
           </a>
           <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#">My Profile</a></li>
+            <li><a className="dropdown-item" onClick={Myprofile} href="#">{userData.name}</a></li>
             <li><a className="dropdown-item" onClick={handleLoginClick} href="">New User?</a></li>
             <li><a className="dropdown-item" onClick={handleClick} href="#">Logout</a></li>
           </ul>

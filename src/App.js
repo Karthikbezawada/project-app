@@ -12,6 +12,8 @@ import NL from './newla.js'
 import Products from './products.js';
 import ContactUs from './cont.js'
 import Serv from './servicepage.js'
+import MP from './myprofile.js'
+
 
 function App() {
     return (
@@ -31,6 +33,7 @@ function App() {
                     <Route path='/products' element={<Products/>}/>
                     <Route path='/contactus' element={<ContactUs/>}/>
                     <Route path='/service' element={<Serv/>}/>
+                    <Route path='/myprofile' element={<MP/>}/>
                     
                     
                     
