@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './navabout';
 import './Component/N.css';
-import Foot from './foot'
+import Foot from './foot';
 
 function Products() {
   return (
